@@ -1,6 +1,7 @@
 # ITP4513_project
 A UI Prototype school project which **was done in 2019** using HTML, CSS, javascript and JQuery.  
-This repo is only stored for the part owned by me or inspiration to the future student who needs to study ITP4513.
+This repo is only stored for the part owned by me or inspiration to the future student who needs to study ITP4513.  
+The images are used in this project is provided by internet.
 
 # Topic / Scenario
 Yummy Everywhere (provides an online portal for customers to browse takeaway menus of various restaurants)
