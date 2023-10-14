@@ -1,0 +1,187 @@
+<html>
+	<head>
+		<title>The most convenient tookaway website | Yummy Everywhere</title>
+		
+		<link rel="stylesheet" href="css/index.css">
+		<link rel="stylesheet" href="css/page.css">
+        <link rel="stylesheet" href="css/star.css">
+		<script src="js/jquery.min.js"></script>
+		<script src="js/menu.js"></script>
+		<script src="js/url.js"></script>
+        <script src="js/profile.js"></script>
+		<script src="js/star.js"></script>
+		<style>
+			#floatdetail{
+				padding: 20px 25px;
+			}
+			
+			#floatdetail button{
+				padding:5px 8px;
+				background-color:white;
+				border:1px solid black;
+				margin-right:5px;
+				border-radius:2px;
+			}
+			
+			#floatdetail table td:nth-child(1){
+				font-weight: bold;
+				padding-right:20px;
+			}
+			
+			#floatdetail table tr td{
+				padding-bottom:8px;
+			}
+			
+			#floatdetail table{
+				border-bottom:1px solid #56300157;
+			}
+			
+			#floatdetail input{
+				background-color:#fdf8c1;
+				border:1px solid black;
+				width:100%;
+				padding:0px 3px;
+			}
+		</style>
+		<script>
+			$(document).ready(function(){
+				$("#floatdetail button").mouseenter(function(){
+					$(this).animate({"opacity":"0.6"},100);
+				}).mouseleave(function(){
+					$(this).animate({"opacity":"1.0"},100);
+				});
+				
+				$("#oldpwd").focusout(function(){
+					//console.log("a1|"+$(this).val());
+					if($(this).val() == ""){
+						$(this).css("border","1px solid red");
+						$(this).parent().parent().find(".req").css("display","block");
+					}else{
+						$(this).css("border","");
+						$(this).parent().parent().find(".req").css("display","none");
+					}
+				});
+				
+				
+				
+				$("#oldpwd").keyup(function(){
+					//console.log("a1|"+$(this).val());
+					if($(this).val() != ""){
+						$(this).css("border","");
+						$(this).parent().parent().find(".req").css("display","none");
+					}
+				});
+				
+				$("#newpwd2").focusout(function(){
+					//console.log("a1|"+$(this).val());
+					if($("#newpwd").val() != "" && $(this).val() == ""){
+						$(this).css("border","1px solid red");
+						$(this).parent().parent().find(".req").css("display","block");
+					}else{
+						$(this).css("border","");
+						$(this).parent().parent().find(".req").css("display","none");
+					}
+				});
+				
+				$("#newpwd2").keyup(function(){
+					//console.log("a1|"+$(this).val());
+					if($(this).val() != ""){
+						$(this).css("border","");
+						$(this).parent().parent().find(".req").css("display","none");
+					}
+				});
+				
+				$("#sub").click(function(){
+					if($("#oldpwd").val() != ""){
+						alert("The personal information is changed.");
+					}else{
+						$("#oldpwd").css("border","1px solid red");
+						$("#oldpwd").parent().parent().find(".req").css("display","block");
+					}
+				});
+			});
+		</script>
+	</head>
+
+	<body>
+		<div id="searchlayer"></div>
+		<div id="nav">
+			<div id="navitem">
+				
+				<div id="menubtn"><img src="images/menu.png"/></div>
+				
+				<div id="searchboxbtn"><input id="searchbox" class="searchbox" type="text" placeholder="Enter your target food..."/></div>
+				<div id="searchbtn"><img src="images/search.png"/></div>
+				
+			</div>
+		</div>
+		<div id="left_menu">
+			<div id="backbtn"><img id="back" src="images/back.png"/></div>
+			<div class="leftmenubtn"><img src="images/home.png"/><div class="btntext">Home</div></div>
+			<div class="leftmenubtn">
+				<img src="images/user.png"/><div id="user">User<br>User information
+			</div></div>
+			<div id="menubtncontainer">
+				<div class="leftmenubtn">
+					<img src="images/star.png"/><div class="btntext">Favourite</div>
+				</div>
+				<div class="leftmenubtn">
+					<img src="images/alarm.png"/><div class="btntext">Notification</div>
+				</div>
+				<div class="leftmenubtn">
+					<img src="images/hold.png"/><div class="btntext">Feedback</div>
+				</div>
+				<div class="leftmenubtn">
+					<img src="images/login.png"/><div class="btntext">Sign out</div>
+				</div>
+			</div>
+		</div>
+			<div id="floatpage">
+				<div id="float">
+					<div id="detailpic"><img src="images/userpic.png"><div id="detailpiclayer"><img src="images/userpiclayer.png"></div></div>
+					
+                    <div id="detailrest">
+                        User: ahudsca<br>
+                        Last Log in: 2019-05-14
+                    </div>
+				</div>
+                <div id="floatdetail">
+					(*required)
+					<table>
+						<tr><td>Username</td><td>ahudsca</td><td></td></tr>
+						<tr><td>Email</td><td><input type="email" value="ahudsca412@gmail.com"/></td><td></td></tr>
+						<tr><td>Brithday</td><td><input type="date" value="1999-09-08"/></td><td></td></tr>
+						<tr><td><br></td><td></td><td></td></tr>
+						
+						<tr><td>New Password</td><td><input id="newpwd" type="password"/></td><td></td></tr>
+						<tr><td>Repeat New Password</td><td><input id="newpwd2" type="password"/></td><td><label class="req" style="color:red;display:none;">*Please repeat the password</label></td></tr>
+						<tr><td><br></td><td></td></tr>
+						<tr><td>Old Password*</td><td><input id="oldpwd" type="password"/></td><td><label class="req" style="color:red;display:none;">*This is required</label></td></tr>
+					</table>
+					<br>
+					<button id="sub">Submit</button><button>Cancel</button>
+				</div>
+		
+		<div id="footer">
+			<table>
+			<tr><th>Customer Serive</th><th style="border-bottom:0px;"></th><th>About us</th><tr>
+			<tr><td><ol>
+				<li><a href="about.html">Contact us</a></li>
+				<li><a href="login.html">Log in</a></li>
+				<li><a href="login.html">Sign up</a></li>
+				<li><a href="profile.html">Account</a></li>
+			</ol></td>
+			<td></td>
+			<td><ol>
+				<li><a href="about.html">About us</a></li>
+				<li><a href="about.html">Feedback</a></li>
+			</ol></td></tr>
+
+			<tr><td colspan="3">Copyright © 2019 Yummy Everywhere</td></tr>
+			</table>
+		</div>
+		
+		<iframe>
+		</iframe>
+	</body>
+</html>

@@ -1,0 +1,131 @@
+<html>
+	<head>
+		<title>Account Detail</title>
+		<link rel="stylesheet" href="css/menu.css" />
+		<link rel="stylesheet" href="css/card.css" />
+		<link rel="stylesheet" href="css/usermodify.css" />
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<script src="jquery/jquery-3.4.1.js"></script>
+		<script src="jquery/jquery-ui.js"></script>
+		<script src="jquery/menu.js"></script>
+		<script>
+			$(document).ready(function() {
+				$("#sub").click(function(){
+				
+					$("#oldpwdshow").css("display","none");
+					$("#newpwdshow").css("display","none");
+					$("#newpwd2show").css("display","none");
+					$("#newpwd2show2").css("display","none");
+				
+					if($("#oldpwd").val() != ""&&$("#newpwd").val() != ""&&$("#newpwd2").val() != ""){
+						if($("#newpwd").val() == $("#newpwd2").val()){
+							alert("The detail is changed.");
+						}else{
+							$("#newpwd2show2").css("display","block");
+						}
+					}else{
+						if($("#oldpwd").val() == ""){
+							$("#oldpwdshow").css("display","block");
+						}
+						if($("#newpwd").val() == ""){
+							$("#newpwdshow").css("display","block");
+						}
+						if($("#newpwd2").val() == ""){
+							$("#newpwd2show").css("display","block");
+						}else{
+							if($("#newpwd").val() != $("#newpwd2").val()){
+								$("#newpwd2show2").css("display","block");
+							}
+						}
+						
+					}
+				});
+				
+				
+			});
+		</script>
+		<style>
+			#usermodify td:nth-child(3){
+				width:300px;
+				text-align:left;
+			}
+		</style>
+	</head>
+	
+	<body>
+		<div id="header">
+			<div id="menu">
+				<div id="menublock">
+					<i class="fa fa-bars fa-lg" aria-hidden="true"></i>
+				</div>
+				<div id="menublockempty"></div>
+				<div id="leftmenu">
+					<a href="admin-change.html"><div id="user"><i class="fa fa-user-circle fa-2x" aria-hidden="true"></i></div></a>
+					<a href="index.html"><div class="menubtncontainer"><div class="menubtn"><div><i class="fa fa-home fa-2x" aria-hidden="true"></i><br>Home</div></div></div></a>
+					<a href="customer-userlist.html"><div class="menubtncontainer"><div class="menubtn"><div><i class="fa fa-users fa-2x" aria-hidden="true"></i><br>Customer</div></div></div></a>
+					<a href="opeator-userlist.html"><div class="menubtncontainer"><div class="menubtn"><div><i class="fa fa-cutlery fa-2x" aria-hidden="true"></i><br>Operator</div></div></div></a>
+					<div class="menubtncontainer"><div class="menubtn"><div><i class="fa fa-cogs fa-2x" aria-hidden="true"></i><br>Admin</div></div></div>
+				</div>
+			</div>
+			<div id="subheader">
+				<div id="subheaderleft">
+					<div id="logo"><img src="img/logo.png"/></div>
+					<i class="fa fa-question-circle-o fa-lg" aria-hidden="true"></i>
+				</div>
+				<div id="subheaderright">
+					<select>
+						<option>Language: English</option>
+						<option>Language: Chinese</option>
+					</select>
+					<button id="menulogout"><i class="fa fa-sign-out" aria-hidden="true"></i>Logout</button>
+				</div>
+			</div>
+			
+		</div>
+		<div id="main">
+			<div id="content">
+				<div id="maincontent">
+					<div class="card">
+					<div id="maincontenttitle">Change Detail</div>
+						
+					</div>
+					<div class="card">
+						<table id="usermodify" >
+							<tr>
+								<td>Username</td>
+								<td>saknnaii123</td>
+								<td ></td>
+							</tr>
+							<tr>
+								<td>Old Password</td>
+								<td><input id="oldpwd" type="password"/></td>
+								<td><span id="oldpwdshow" style="color:red;display:none;">Please enter your old password.</span></td>
+							</tr>
+							<tr>
+								<td>New Password</td>
+								<td><input id="newpwd" type="password"/></td>
+								<td><span id="newpwdshow" style="color:red;display:none;">Please enter your new password.</span></td>
+							</tr>
+							<tr>
+								<td>Repeat New Password</td>
+								<td><input id="newpwd2" type="password"/></td>
+								<td><span id="newpwd2show" style="color:red;display:none;">Please repeat your new password.<br></span>
+									<span id="newpwd2show2" style="color:red;display:none;">Repeat password is not match.</span></td>
+							</tr>
+						</table>
+					</div>
+					
+					<div class="card">
+						<div id="buttonlist">
+							<div id="buttonlistleft">
+								<button id="sub">Submit</button>
+								<button>Cancel</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+	</body>
+</html>

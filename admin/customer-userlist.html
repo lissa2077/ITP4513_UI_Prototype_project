@@ -1,0 +1,114 @@
+<html>
+	<head>
+		<title>Customer</title>
+		<link rel="stylesheet" href="css/menu.css" />
+		<link rel="stylesheet" href="css/userlist.css" />
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<script src="jquery/jquery-3.4.1.js"></script>
+		<script src="jquery/jquery-ui.js"></script>
+		<script src="jquery/menu.js"></script>
+		<script src="jquery/userlist.js"></script>
+		<script>
+			$(document).ready(function(){
+				$(".fa-pencil-square-o").click(function(){
+					location.href = 'customer-usermodify.html';
+				});
+				
+				$("#add").click(function(){
+					location.href = 'customer-usermodify.html';
+				});
+				
+				$(".fa-trash").click(function(){
+					if (confirm('Are you sure to delete this account?')) {
+						location.href = 'customer-userlist.html';
+					}
+				});
+				
+				$("#del").click(function(){
+					if (confirm('Are you sure to delete those accounts?')) {
+						location.href = 'customer-userlist.html';
+					}
+				});
+			});
+		</script>
+	</head>
+	
+	<body>
+		<div id="header">
+			<div id="menu">
+				<div id="menublock">
+					<i class="fa fa-bars fa-lg" aria-hidden="true"></i>
+				</div>
+				<div id="menublockempty"></div>
+				<div id="leftmenu">
+					<a href="admin-change.html"><div id="user"><i class="fa fa-user-circle fa-2x" aria-hidden="true"></i></div></a>
+					<a href="index.html"><div class="menubtncontainer"><div class="menubtn"><div><i class="fa fa-home fa-2x" aria-hidden="true"></i><br>Home</div></div></div></a>
+					<a href="customer-userlist.html"><div class="menubtncontainer"><div class="menubtn"><div><i class="fa fa-users fa-2x" aria-hidden="true"></i><br>Customer</div></div></div></a>
+					<a href="opeator-userlist.html"><div class="menubtncontainer"><div class="menubtn"><div><i class="fa fa-cutlery fa-2x" aria-hidden="true"></i><br>Operator</div></div></div></a>
+					<div class="menubtncontainer"><div class="menubtn"><div><i class="fa fa-cogs fa-2x" aria-hidden="true"></i><br>Admin</div></div></div>
+				</div>
+			</div>
+			<div id="subheader">
+				<div id="subheaderleft">
+					<div id="logo"><img src="img/logo.png"/></div>
+					<i class="fa fa-question-circle-o fa-lg" aria-hidden="true"></i>
+				</div>
+				<div id="subheaderright">
+					<select>
+						<option>Language: English</option>
+						<option>Language: Chinese</option>
+					</select>
+					<button id="menulogout"><i class="fa fa-sign-out" aria-hidden="true"></i>Logout</button>
+				</div>
+			</div>
+			
+		</div>
+		<div id="main">
+			<div id="content">
+				<div id="maincontent">
+					<div class="card">
+					<div id="maincontenttitle">Customer List</div>
+						<div id="buttonlist">
+							<div id="buttonlistleft">
+								<button id="add">Add New Customer</button>
+								<button id="del">Delete Selected Customer</button>
+							</div>
+							<div id="buttonlistright">
+								<div id="searchbar"><input type="text" placeholder="keyword"/><button>Search</button><button id="searchfitter"><i class="fa fa-cog fa-lg" aria-hidden="true"></i></button></div>
+							</div>
+						</div>
+						<div id="fitter">
+							<table>
+							<tr><td>Username</td><td><input type="text"/></td></tr>
+							<tr><td>Last Login Date</td><td><input type="date"/> To <input type="date"/></td></tr>
+							<tr><td>Register Date</td><td><input type="date"/> To <input type="date"/></td></tr>
+							</table>
+							<button>Search</button>
+						</div>
+					</div>
+					<div class="card">
+						<div id="tablecontainer">
+							<table id="userlist">
+								<tr><td></td><td>User ID</td><td>Username</td><td>Last Login Date</td><td>Register Date</td><td></td><td></td></tr>
+								<tr><td><input type="checkbox"/></td><td>6323</td><td>Mah8371</td><td>2019-11-22</td><td>2019-10-17</td><td><i class="fa fa-pencil-square-o fa-lg" aria-hidden="true"></i></td><td><i class="fa fa-trash fa-lg" aria-hidden="true"></i></td></tr>
+								<tr><td><input type="checkbox"/></td><td>6323</td><td>Mah8371</td><td>2019-11-22</td><td>2019-10-17</td><td><i class="fa fa-pencil-square-o fa-lg" aria-hidden="true"></i></td><td><i class="fa fa-trash fa-lg" aria-hidden="true"></i></td></tr>
+								<tr><td><input type="checkbox"/></td><td>6323</td><td>Mah8371</td><td>2019-11-22</td><td>2019-10-17</td><td><i class="fa fa-pencil-square-o fa-lg" aria-hidden="true"></i></td><td><i class="fa fa-trash fa-lg" aria-hidden="true"></i></td></tr>
+								<tr><td><input type="checkbox"/></td><td>6323</td><td>Mah8371</td><td>2019-11-22</td><td>2019-10-17</td><td><i class="fa fa-pencil-square-o fa-lg" aria-hidden="true"></i></td><td><i class="fa fa-trash fa-lg" aria-hidden="true"></i></td></tr>
+								<tr><td><input type="checkbox"/></td><td>6323</td><td>Mah8371</td><td>2019-11-22</td><td>2019-10-17</td><td><i class="fa fa-pencil-square-o fa-lg" aria-hidden="true"></i></td><td><i class="fa fa-trash fa-lg" aria-hidden="true"></i></td></tr>
+								<tr><td><input type="checkbox"/></td><td>6323</td><td>Mah8371</td><td>2019-11-22</td><td>2019-10-17</td><td><i class="fa fa-pencil-square-o fa-lg" aria-hidden="true"></i></td><td><i class="fa fa-trash fa-lg" aria-hidden="true"></i></td></tr>
+								<tr><td><input type="checkbox"/></td><td>6323</td><td>Mah8371</td><td>2019-11-22</td><td>2019-10-17</td><td><i class="fa fa-pencil-square-o fa-lg" aria-hidden="true"></i></td><td><i class="fa fa-trash fa-lg" aria-hidden="true"></i></td></tr>
+								<tr><td><input type="checkbox"/></td><td>6323</td><td>Mah8371</td><td>2019-11-22</td><td>2019-10-17</td><td><i class="fa fa-pencil-square-o fa-lg" aria-hidden="true"></i></td><td><i class="fa fa-trash fa-lg" aria-hidden="true"></i></td></tr>
+								<tr><td><input type="checkbox"/></td><td>6323</td><td>Mah8371</td><td>2019-11-22</td><td>2019-10-17</td><td><i class="fa fa-pencil-square-o fa-lg" aria-hidden="true"></i></td><td><i class="fa fa-trash fa-lg" aria-hidden="true"></i></td></tr>
+								<tr><td><input type="checkbox"/></td><td>6323</td><td>Mah8371</td><td>2019-11-22</td><td>2019-10-17</td><td><i class="fa fa-pencil-square-o fa-lg" aria-hidden="true"></i></td><td><i class="fa fa-trash fa-lg" aria-hidden="true"></i></td></tr>
+							</table>
+							<table>
+								<tr><td>page:1</td><td style="text-align:right;width:100%"><u>1</u> <u>2</u> <u>3</u> <u>4</u> <u>5</u> ... <u>99</u></td></tr>
+							</table>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+	</body>
+</html>

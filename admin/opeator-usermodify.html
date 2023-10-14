@@ -1,0 +1,109 @@
+<html>
+	<head>
+		<title>Operator</title>
+		<link rel="stylesheet" href="css/menu.css" />
+		<link rel="stylesheet" href="css/usermodify.css" />
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<script src="jquery/jquery-3.4.1.js"></script>
+		<script src="jquery/jquery-ui.js"></script>
+		<script src="jquery/menu.js"></script>
+		<script src="jquery/userpic.js"></script>
+		<script src="jquery/modify.js"></script>
+		<script>
+			$(document).ready(function(){
+				$("#sub").click(function(){
+					location.href = 'opeator-userlist.html';
+				});
+				
+				$("#can").click(function(){
+					location.href = 'opeator-userlist.html';
+				});
+				
+				$("#del").click(function(){
+					if (confirm('Are you sure to delete this account?')) {
+						location.href = 'opeator-userlist.html';
+						alert("This account is deleted.");
+					}
+				});
+				
+			});
+		</script>
+	</head>
+	
+	<body>
+		<div id="header">
+			<div id="menu">
+				<div id="menublock">
+					<i class="fa fa-bars fa-lg" aria-hidden="true"></i>
+				</div>
+				<div id="menublockempty"></div>
+				<div id="leftmenu">
+					<a href="admin-change.html"><div id="user"><i class="fa fa-user-circle fa-2x" aria-hidden="true"></i></div></a>
+					<a href="index.html"><div class="menubtncontainer"><div class="menubtn"><div><i class="fa fa-home fa-2x" aria-hidden="true"></i><br>Home</div></div></div></a>
+					<a href="customer-userlist.html"><div class="menubtncontainer"><div class="menubtn"><div><i class="fa fa-users fa-2x" aria-hidden="true"></i><br>Customer</div></div></div></a>
+					<a href="opeator-userlist.html"><div class="menubtncontainer"><div class="menubtn"><div><i class="fa fa-cutlery fa-2x" aria-hidden="true"></i><br>Operator</div></div></div></a>
+					<div class="menubtncontainer"><div class="menubtn"><div><i class="fa fa-cogs fa-2x" aria-hidden="true"></i><br>Admin</div></div></div>
+				</div>
+			</div>
+			<div id="subheader">
+				<div id="subheaderleft">
+					<div id="logo"><img src="img/logo.png"/></div>
+					<i class="fa fa-question-circle-o fa-lg" aria-hidden="true"></i>
+				</div>
+				<div id="subheaderright">
+					<select>
+						<option>Language: English</option>
+						<option>Language: Chinese</option>
+					</select>
+					<button id="menulogout"><i class="fa fa-sign-out" aria-hidden="true"></i>Logout</button>
+				</div>
+			</div>
+			
+		</div>
+		<div id="main">
+			<div id="content">
+				<div id="maincontent">
+					<div class="card">
+					<div id="maincontenttitle">Operator Create/Modify</div>
+						
+					</div>
+					<div class="card">
+						<table id="usermodify">
+							<tr><td>OperatorID</td><td>2718</td><td rowspan="5"><div id="detailpic"><img src="img/userpic.png"><div id="detailpiclayer"><img src="img/userpiclayer.png"></div></div></td></tr>
+							<tr><td>Username</td><td><input type="text" value="Masusda"/></td></tr>
+							<tr><td>Password</td><td><input type="password" value="siajiad"/></td></tr>
+							<tr><td>Email</td><td><input type="text" value="Masusda@gmail.com"/></td></tr>
+							<tr><td>Restaurant</td><td>ABC restaurant</td></tr>
+							<tr><td></td><td><div id="buttonlist"><div id="buttonlistleft"><div id="searchbar"><input type="text" placeholder="keyword"/><button id="searchfitter"><i class="fa fa-search fa-lg" aria-hidden="true"></i></button></div>
+							</div></div>
+							<div id="fitter">
+								<table border="0">
+									<tr><td>Restaurant Name</td></tr>
+									<tr><td>ABC restaurant1</td></tr>
+									<tr><td>ABC restaurant2</td></tr>
+									<tr><td>ABC restaurant3</td></tr>
+								</table>
+							</div>
+							</td>
+							
+							</tr>
+							
+						</table>
+						<br>
+							<div id="buttonlist">
+								<div id="buttonlistleft">
+									<button id="sub">Submit</button>
+									<button id="can">Cancel</button>
+								</div>
+								<div id="buttonlistright">
+									<button id="del" style="background-color:#c74747;">Delete Selected Operator</button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+	</body>
+</html>

@@ -1,0 +1,155 @@
+<html>
+	<head>
+		<title>Main</title>
+		<link rel="stylesheet" href="css/menu.css" />
+		<link rel="stylesheet" href="css/main.css" />
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<script src="jquery/jquery-3.4.1.js"></script>
+		<script src="jquery/jquery-ui.js"></script>
+		<script src="jquery/jquery.backgroundpos.min.js"></script>
+		<script src="jquery/menu.js"></script>
+		<script src="jquery/main.js"></script>
+		<script src="jquery/Chart.min.js"></script>
+		
+	
+  
+	</head>
+	
+	<body>
+		<div id="header">
+			<div id="menu">
+				<div id="menublock">
+					<i class="fa fa-bars fa-lg" aria-hidden="true"></i>
+				</div>
+				<div id="menublockempty"></div>
+				<div id="leftmenu">
+					<a href="admin-change.html"><div id="user"><i class="fa fa-user-circle fa-2x" aria-hidden="true"></i></div></a>
+					<a href="index.html"><div class="menubtncontainer"><div class="menubtn"><div><i class="fa fa-home fa-2x" aria-hidden="true"></i><br>Home</div></div></div></a>
+					<a href="customer-userlist.html"><div class="menubtncontainer"><div class="menubtn"><div><i class="fa fa-users fa-2x" aria-hidden="true"></i><br>Customer</div></div></div></a>
+					<a href="opeator-userlist.html"><div class="menubtncontainer"><div class="menubtn"><div><i class="fa fa-cutlery fa-2x" aria-hidden="true"></i><br>Operator</div></div></div></a>
+					<div class="menubtncontainer"><div class="menubtn"><div><i class="fa fa-cogs fa-2x" aria-hidden="true"></i><br>Admin</div></div></div>
+				</div>
+			</div>
+			<div id="subheader">
+				<div id="subheaderleft">
+					<div id="logo"><img src="img/logo.png"/></div>
+					<i class="fa fa-question-circle-o fa-lg" aria-hidden="true"></i>
+				</div>
+				<div id="subheaderright">
+					<select>
+						<option>Language: English</option>
+						<option>Language: Chinese</option>
+					</select>
+					<button id="menulogout"><i class="fa fa-sign-out" aria-hidden="true"></i>Logout</button>
+				</div>
+			</div>
+			
+		</div>
+		<div id="main">
+			<div id="content">
+				<div id="halftopbg"></div>
+				<div id="halfbottombg"></div>
+				<div id="mainmenucontainer">
+				
+					<div class="mainmenublock">
+						<a href="customer-usermodify.html">
+							<div class="numberuser">
+								<label id="numberofuser">143</label>
+								<label>Customer</label>
+							</div>
+						</a>
+						<i class="fa fa-users fa-5x" aria-hidden="true"></i>
+						
+					</div>
+					<div class="mainmenublock">
+						<a href="opeator-usermodify.html">
+							<div class="numberuser">
+								<label id="numberofuser">143</label>
+								<label>Operator</label>
+							</div>
+						</a>
+						<i class="fa fa-cutlery fa-5x" aria-hidden="true"></i>
+					</div>
+					<div class="mainmenublock">
+						<a href="customer-usermodify.html">
+							<div class="numberuser">
+								<label id="numberofuser">143</label>
+								<label>Admin</label>
+							</div>
+						</a>
+						<i class="fa fa fa-cogs fa-5x" aria-hidden="true"></i>
+					</div>
+				</div>
+				<div id="maincontainer">
+					<div id="mainleftcontainer">
+						<div id="chartblock">
+							<div id="blocktitle">
+								Website pageviews
+							</div>
+							<div class="chart-container">
+								<canvas id="chart" width="400" height="130"></canvas>
+							</div>
+						</div>
+						<div id="databuttonblock">
+							<table>
+								<div id="blocktitle">
+									Quick Navigation
+								</div>
+								<tr>
+									<td id="border"><a href="customer-usermodify.html"><i class="fa fa-user-plus fa-2x" aria-hidden="true"></a></td>
+									<td id="border"><i class="fa fa-address-card fa-2x" aria-hidden="true"></td>
+									<td id="border"><i class="fa fa-check-circle fa-2x" aria-hidden="true"></td>
+									<td id="border"><a href="userrole.html"><i class="fa fa-tasks fa-2x" aria-hidden="true"></a></td>
+									<td><a href="admin-change.html"><i class="fa fa-wrench fa-2x" aria-hidden="true"></a></td>
+								</tr>
+								<tr>
+									<td id="border"><a href="customer-usermodify.html">Add Customer</a></td>
+									<td id="border">Customer Registration Record</td>
+									<td id="border">Accept Operator Application</td>
+									<td id="border"><a href="userrole.html">Manage Role</a></td>
+									<td><a href="admin-change.html">Personal Profile Setting</a></td>
+								</tr>
+							</table>
+						</div>
+					</div>
+					<div id="mainrightcontainer">
+						<div id="appblock">
+							<div id="appblockbg">
+								<div id="appblocktext"><label>5</label><br>Operator<br>Application</div>
+							</div>
+						</div>
+						<div id="newuserblock">
+							<table border="0">
+								<tr><td colspan="2">New Customer</td><td>Date</td></tr>
+								<tr><td><i class="fa fa-user-circle-o fa-lg" aria-hidden="true"></i></td><td>Maya212</td><td>2019-11-20 17:21</td></tr>
+								<tr><td><i class="fa fa-user-circle-o fa-lg" aria-hidden="true"></i></td><td>Eater26300</td><td>2019-11-20 14:56</td></tr>
+								<tr><td><i class="fa fa-user-circle-o fa-lg" aria-hidden="true"></i></td><td>hopeer</td><td>2019-11-20 13:00</td></tr>
+							</table>
+							
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+	</body>
+	<script>
+  	var ctx = document.getElementById("chart");
+		var stackedLine = new Chart(ctx, {
+			type: 'line',
+			data: {
+				labels: ['May', 'June', 'July', 'August', 'September', 'October'],
+				datasets: [{
+					label: '# month',
+					data: [9, 19, 11, 29, 13, 3],
+					borderWidth: 1,
+					backgroundColor: "#ffbc4475"
+				}]
+			},
+			option:{
+				maintainAspectRatio: false,
+				responsive: false, 
+			}
+		});
+  </script>
+</html>

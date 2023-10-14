@@ -1,0 +1,49 @@
+.card{
+    background-color: white;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 0px solid;
+    border-radius: 3px;
+    box-shadow: 2px 4px 14px #0000008a;
+    padding-bottom: 18px;
+}
+
+#buttonlist{
+	display: flex;
+    justify-content: space-between;
+	border: 1px solid #000000;
+}
+
+#buttonlist button,#fitter button{
+	border: 1px solid #000000;
+    color: white;
+    background-color: #c79a47;
+    padding: 6px;
+    margin: 3px;
+	box-shadow: 2px 2px 3px 0px #492f004d;
+    border-radius: 2px;
+}
+
+#role{
+	width:100%;
+	border-collapse: collapse;
+	
+}
+
+#role td{
+	height:30px;
+	width:25%;
+	border-top: 1px solid #b1b1b173;
+	border-bottom: 1px solid #b1b1b173;
+	
+}
+
+#role tr{
+	height:30px;
+	width:25%;
+	
+}
+
+.subtitle{
+	font-family: sans-serif;
+}

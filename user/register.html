@@ -1,0 +1,76 @@
+<html>
+	<head>
+		<title>The most convenient tookaway website | Yummy Everywhere</title>
+		
+		<link rel="stylesheet" href="css/index.css">
+		<link rel="stylesheet" href="css/page.css">
+		<script src="js/jquery.min.js"></script>
+		<link rel="stylesheet" href="css/login.css">
+        <script src="js/login.js"></script>
+		<script>
+			$(document).ready(function(){
+			
+				console.log($("input[type=text]"));
+				
+				$(".effect-1").focusout(function(){
+					//console.log("a1|"+$(this).val());
+					if($(this).val() == ""){
+						$(this).css("border","1px solid red");
+						$(this).parent().find(".req").css("display","block");
+					}else{
+						$(this).css("border","");
+						$(this).parent().find(".req").css("display","none");
+					}
+				});
+				
+				$(".effect-1").keyup(function(){
+					//console.log("a1|"+$(this).val());
+					if($(this).val() != ""){
+						$(this).css("border","");
+						$(this).parent().find(".req").css("display","none");
+					}
+				});
+			});
+		</script>
+	</head>
+	<body>
+		<div id="loginpage">
+			<div id="login">
+				<div id="logoplace">
+					<img src="images/logo.png" style="width:50%"><br>
+					Welcome to our website. We will provide the best service for you.<br><br>
+					In here, we give you all the takeaway restaurant detail.<br><br>
+				</div>
+				<div class="col-3 input-effect">
+				   <input class="effect-1" type="text" placeholder="" />
+				   <label>Your username</label><label class="req" style="display:none;text-align:right;color:red">*This is required</label>
+				</div>
+				<div class="col-3 input-effect">
+				   <input class="effect-1" type="password" placeholder="" />
+				   <label>Your Password</label><label class="req" style="display:none;text-align:right;color:red">*This is required</label>
+				</div>
+				
+				<div class="col-3 input-effect">
+				   <input class="effect-1" type="password" placeholder="" />
+				   <label>Repeat Password</label><label class="req" style="display:none;text-align:right;color:red">*This is required</label>
+				</div>
+				
+				<div class="col-3 input-effect">
+				   <input class="effect-1" type="text" placeholder="" />
+				   <label>Your Email</label><label class="req" style="display:none;text-align:right;color:red">*This is required</label>
+				</div>
+				
+				<div class="col-3 input-effect">
+					<label style="color:#f6a41b">Birthday</label>
+				   <input class="effect-1" type="date" placeholder="" />
+				   
+				</div>
+				<br>
+				
+				<div id="btn">
+					<div id="loginbtn"><b>Register</b></div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

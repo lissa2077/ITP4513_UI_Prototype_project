@@ -1,0 +1,93 @@
+<html>
+	<head>
+		<title>The most convenient tookaway website | Yummy Everywhere</title>
+		
+		<link rel="stylesheet" href="css/index.css">
+		<link rel="stylesheet" href="css/page.css">
+        <link rel="stylesheet" href="css/star.css">
+		<script src="js/jquery.min.js"></script>
+		<script src="js/menu.js"></script>
+		<script src="js/url.js"></script>
+		<script src="js/detail.js"></script>
+        <script src="js/star.js"></script>
+
+	</head>
+
+	<body>
+		<div id="searchlayer"></div>
+		<div id="nav">
+			<div id="navitem">
+				
+				<div id="menubtn"><img src="images/menu.png"/></div>
+				
+				<div id="searchboxbtn"><input id="searchbox" class="searchbox" type="text" placeholder="Enter your target food..."/></div>
+				<div id="searchbtn"><img src="images/search.png"/></div>
+				
+			</div>
+		</div>
+		<div id="left_menu">
+			<div id="backbtn" ><img id="back" src="images/back.png"/></div>
+			<div class="leftmenubtn"><img src="images/home.png"/><div class="btntext">Home</div></div>
+			<div class="leftmenubtn">
+				<img src="images/login1.png"/><div id="user">Login<br>for more enjoy function
+			</div></div>
+			<div id="menubtncontainer">
+				<div class="leftmenubtn">
+					<img src="images/star.png"/><div class="btntext">Favourite</div>
+				</div>
+				<div class="leftmenubtn">
+					<img src="images/alarm.png"/><div class="btntext">Notification</div>
+				</div>
+				<div class="leftmenubtn">
+					<img src="images/hold.png"/><div class="btntext">Feedback</div>
+				</div>
+			</div>
+		</div>
+			<input type="hidden" id="restid"/>
+			<div id="floatpage">
+				<div id="float">
+				</div>
+                <div id="floatdetail"></div>
+                <div id="floatmenu"><b>The take-away Menu</b><br><br>You should <a href="login.html">login</a> to see the menu!
+                  
+                </div>
+            <div id="floatcomment">
+                <div id="floatcommenttop"><b>Comments</b></div>
+                
+            </div>
+		
+		<div id="footer">
+			<table>
+			<tr><th>Customer Serive</th><th style="border-bottom:0px;"></th><th>About us</th><tr>
+			<tr><td><ol>
+				<li><a href="about.html">Contact us</a></li>
+				<li><a href="login.html">Log in</a></li>
+				<li><a href="login.html">Sign up</a></li>
+				<li><a href="profile.html">Account</a></li>
+			</ol></td>
+			<td></td>
+			<td><ol>
+				<li><a href="about.html">About us</a></li>
+				<li><a href="about.html">Feedback</a></li>
+			</ol></td></tr>
+
+			<tr><td colspan="3">Copyright © 2019 Yummy Everywhere</td></tr>
+			</table>
+		</div>
+		
+		        
+        <script async defer
+          src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDSOdwwB5GkCIbLw0PZr1Z7GX781by7IFs&callback=initMap">
+        </script>
+
+		<script>
+        var map;
+          function initMap() {
+            map = new google.maps.Map(document.getElementById('map'), {
+              center: {lat: -34.397, lng: 150.644},
+              zoom: 8
+            });
+          }
+        </script>
+	</body>
+</html>

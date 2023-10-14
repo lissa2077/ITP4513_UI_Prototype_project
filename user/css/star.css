@@ -1,0 +1,10 @@
+.resultbtn{
+    padding: 3px;
+	float:right;
+}
+
+.resultbtn img{
+	width:30px;
+	height:30px;
+    box-shadow: none;
+}

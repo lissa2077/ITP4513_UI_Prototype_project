@@ -1,0 +1,156 @@
+:root{
+	--swiper-theme-color: ffffcc;
+}
+body{
+	//background-color: #FFFFDD;
+	background-image: url(../images/bg.jpg);
+	background-repeat: repeat;
+	background-position: center;
+	
+	
+}
+
+#nav{
+	position: fixed;
+	top:0;
+	left:0;
+	width:100%;
+	height:40px;
+    
+	//border: 1px solid black;
+	background-color:#ffAA1a;
+	border-top: 1px solid #eeA108;
+	border-bottom: 2px solid #cc8100;
+	z-index:100;
+	box-shadow: 0px 1px 5px #825200;
+}
+#navitem{
+	width:100%;
+	padding:10px 0px;
+	display: flex;
+	justify-content: space-between;
+}
+
+#left_menu{
+	display:none;
+	position: fixed;
+	width:45%;
+	height:100vh;
+	left:0;
+	margin-left:-45%;
+	background-color:#eabc6c;
+	box-shadow: 1px 0 15px #9c6200;
+	z-index:90;
+	padding:40px 0px;
+}
+
+#user{
+	//border:1px solid black;
+	text-align:left;
+	line-height:20px;
+	margin: 0px 35px;
+}
+#backbtn{
+	padding:10px;
+	height:30px;
+	box-shadow: 0px 2px 5px 0px #000000Ad;
+	background-color:#f7c367;
+	width:30px;
+	margin-bottom:10px;
+	
+}
+
+#backbtn img{
+	width:30px;
+	height:30px;
+	//position:absolute;
+	//margin:auto 0px;
+}
+
+.leftmenubtn{
+	//border:1px solid black;
+	padding:10px;
+	height:30px;
+	box-shadow: 0px 2px 5px 0px #0000007d;
+	background-color:#f7c367;
+	height:auto;
+}
+
+.leftmenubtn img{
+	width:30px;
+	height:30px;
+	position:absolute;
+	margin:auto 0px;
+}
+
+.leftmenubtn .btntext{
+	line-height:30px;
+	text-align:center;
+	margin:0px 35px;
+}
+
+#menubtn{
+	clear:left;
+	display:inline;
+	padding:0px 15px;
+}
+
+#menubtn img,#searchbtn img{
+	width:23px;
+	height:23px;
+}
+
+#searchbtn{
+	padding:0px 5px;
+	float:right;
+	display:inline;
+}
+#searchboxbtn{
+	display:inline;
+	padding:0px 5px;
+	width:100%;
+	text-align:center;
+	position: relative;
+}
+#searchboxbtn input{
+	width:100%;
+	background-color:#de9c2d;
+	padding:5px;
+	border:0 none;
+	-webkit-border-radius: 3px;
+	border-radius: 3px;
+}
+
+ul,ol{
+	list-style:none;
+}
+
+#footer{
+	position: absolute;
+	left:0;
+	right:0;
+	width:auto%;
+	height:150px;
+	padding:0px 10px;
+	//border: 1px solid yellow;
+	background-color:#1a0d00;
+	border-top: 3px solid #262626;
+	padding:10px;
+	box-shadow: 0px -1px 5px #000000b8;
+}
+
+#footer table{
+	width:90%;
+	color:#ffAA1a;
+	margin:0px 15px 0px 10px;
+}
+
+#footer th{
+	text-align:left;
+	border-bottom:1px solid #ffAA1a;
+	padding:0px 30px;
+}
+
+#footer td{
+	text-align:center;
+}

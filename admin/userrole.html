@@ -1,0 +1,178 @@
+<html>
+	<head>
+		<title>Userrole</title>
+		<link rel="stylesheet" href="css/menu.css" />
+		<link rel="stylesheet" href="css/card.css" />
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<script src="jquery/jquery-3.4.1.js"></script>
+		<script src="jquery/jquery-ui.js"></script>
+		<script src="jquery/menu.js"></script>
+		<script>
+			$(document).ready(function(){
+				$("#sub").click(function(){
+				alert("The setting of user role is changed.");
+					location.href = 'userrole.html';
+				});
+				
+				$("#can").click(function(){
+					location.href = 'index.html';
+				});
+				
+				$("#buttonlist button").mouseenter(function(){
+					$(this).animate({opacity:"0.7"},100);
+				}).mouseleave(function(){
+					$(this).animate({opacity:"1.0"},100);
+				});
+				
+				$("#reset").click(function(){
+					console.log("reset");
+					$("input[type=checkbox]").each(function() {
+						$(this).prop("checked",false);
+							
+					});
+					$(".cc").each(function() {
+					//console.log($(this));
+						$(this).prop("checked",true);
+							
+					});
+					
+				});
+				
+							
+			});
+		</script>
+	</head>
+	
+	<body>
+		<div id="header">
+			<div id="menu">
+				<div id="menublock">
+					<i class="fa fa-bars fa-lg" aria-hidden="true"></i>
+				</div>
+				<div id="menublockempty"></div>
+				<div id="leftmenu">
+					<a href="admin-change.html"><div id="user"><i class="fa fa-user-circle fa-2x" aria-hidden="true"></i></div></a>
+					<a href="index.html"><div class="menubtncontainer"><div class="menubtn"><div><i class="fa fa-home fa-2x" aria-hidden="true"></i><br>Home</div></div></div></a>
+					<a href="customer-userlist.html"><div class="menubtncontainer"><div class="menubtn"><div><i class="fa fa-users fa-2x" aria-hidden="true"></i><br>Customer</div></div></div></a>
+					<a href="opeator-userlist.html"><div class="menubtncontainer"><div class="menubtn"><div><i class="fa fa-cutlery fa-2x" aria-hidden="true"></i><br>Operator</div></div></div></a>
+					<div class="menubtncontainer"><div class="menubtn"><div><i class="fa fa-cogs fa-2x" aria-hidden="true"></i><br>Admin</div></div></div>
+				</div>
+			</div>
+			<div id="subheader">
+				<div id="subheaderleft">
+					<div id="logo"><img src="img/logo.png"/></div>
+					<i class="fa fa-question-circle-o fa-lg" aria-hidden="true"></i>
+				</div>
+				<div id="subheaderright">
+					<select>
+						<option>Language: English</option>
+						<option>Language: Chinese</option>
+					</select>
+					<button id="menulogout"><i class="fa fa-sign-out" aria-hidden="true"></i>Logout</button>
+				</div>
+			</div>
+			
+		</div>
+		<div id="main">
+			<div id="content">
+				<div id="maincontent">
+					<div class="card">
+					<div id="maincontenttitle">Manage User Role</div>
+						
+					</div>
+					<div class="card">
+						<div class="subtitle">Public User</div>
+						<table id="role">
+							<tr>
+								<td><b>Personal Detail</b></td>
+								<td><input type="checkbox"/>Change Personal Detail</td>
+								<td><input type="checkbox"/>Change Icon</td>
+								<td><input type="checkbox"/>Hide Favourite</td>
+							</tr>
+							<tr>
+								<td rowspan="2"><b>View</b></td>
+								<td><input class="cc" type="checkbox" checked/>View Comments</td>
+								<td><input type="checkbox"/>View Menu</td>
+								<td><input class="cc" type="checkbox" checked/>View Restaurant Detail</td>
+							</tr>
+							<tr>
+								<td><input class="cc" type="checkbox" checked/>View Article</td>
+								<td><input class="cc" type="checkbox" checked/>View Top Restaurant</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td><b>Action</b></td>
+								<td><input type="checkbox"/>Give Comments</td>
+								<td><input class="cc" type="checkbox" checked/>Set Favourite</td>
+								<td></td>
+							</tr>
+						</table>
+					</div>
+					<div class="card">
+						<div class="subtitle">Customer</div>
+						<table id="role">
+							<tr>
+								<td><b>Personal Detail</b></td>
+								<td><input class="cc" type="checkbox" checked/>Change Personal Detail</td>
+								<td><input class="cc" type="checkbox" checked/>Change Icon</td>
+								<td><input class="cc" type="checkbox" checked/>Hide Favourite</td>
+							</tr>
+							<tr>
+								<td rowspan="2"><b>View</b></td>
+								<td><input class="cc" type="checkbox" checked/>View Comments</td>
+								<td><input class="cc" type="checkbox" checked/>View Menu</td>
+								<td><input class="cc" type="checkbox" checked/>View Restaurant Detail</td>
+							</tr>
+							<tr>
+								<td><input class="cc" type="checkbox" checked/>View Article</td>
+								<td><input class="cc" type="checkbox" checked/>View Top Restaurant</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td><b>Action</b></td>
+								<td><input class="cc" type="checkbox" checked/>Give Comments</td>
+								<td><input class="cc" type="checkbox" checked/>Set Favourite</td>
+								<td></td>
+							</tr>
+						</table>
+					</div>
+					<div class="card">
+						<div class="subtitle">Operator</div>
+						<table id="role">
+							<tr>
+								<td><b>Restaurant Detail</b></td>
+								<td><input class="cc" type="checkbox" checked/>Change Detail</td>
+								<td><input class="cc" type="checkbox" checked/>Change Icon</td>
+								<td><input class="cc" type="checkbox" checked/>Change Position</td>
+							</tr>
+							<tr>
+								<td><b>View</b></td>
+								<td><input class="cc" type="checkbox" checked/>View Comments</td>
+								<td><input type="checkbox"/>View Favourite Count</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td><b>Action</b></td>
+								<td><input class="cc" type="checkbox" checked/>Change Comments</td>
+								<td><input class="cc" type="checkbox" checked/>Change Menu</td>
+								<td><input class="cc" type="checkbox" checked/>Change Special Menu</td>
+							</tr>
+						</table>
+					</div>
+					<div class="card">
+						<div id="buttonlist">
+							<div id="buttonlistleft">
+								<button id="sub">Submit</button>
+								<button id="can">Cancel</button>
+							</div>
+							<div id="buttonlistright">
+								<button id="reset" style="background-color:#c74747;">Reset</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+	</body>
+</html>
